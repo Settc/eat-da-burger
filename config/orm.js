@@ -33,7 +33,7 @@ const orm =
             cb(result)
         })
     },
-    createOne: function(table, cols, vals, cb) {
+    insertOne: function(table, cols, vals, cb) {
         let queryString = "INSERT INTO " + table + " (" + cols.toString() + ") " + "VALUES (" + questionMarks(vals.length) + ") "
         console.log(queryString)
 
